@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width', initial-scale='1.0')
+    title= title
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css', integrity='sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=', crossorigin='anonymous')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', integrity='sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=', crossorigin='anonymous')
+    script(src='/javascripts/main.js')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+  body
+    div.hero-section
+    include nav
+    br
+    br
+    div.grid-container(data-sticky-container)
+  
+        block content
+
+        div.footer
+            hr
+            p Eurovision Party 2020
+
+    script.
+        $(document).foundation();

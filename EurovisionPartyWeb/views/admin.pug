@@ -1,0 +1,45 @@
+extends shared/layout
+
+block content
+    script(src='/javascripts/results.js')
+    div.grid-x.grid-padding-x
+        div.cell.medium-4.float-left.text-center
+            h2.heading Add User
+            form(name="AddUser", method="post", action="/admin/u/create")
+                div.grid-x  
+                    div.cell
+                        input(type="text", placeholder="Country...", name="country")
+                    div.cell
+                        input(type="text", placeholder="Country Code...", name="countrycode")
+                    div.cell
+                        input(type="submit", name="submit" value="Add").button.hollow
+        div.cell.medium-4.float-center.text-center
+            h2.heading Raw Results
+            button.button.hollow(onclick="LoadResults()",type="button") Load Results
+            div#results-modal(class="reveal", data-reveal)
+                h1 Results
+                div#results-table
+                button.close-button(data-close, aria-label="Close modal", type="button")
+                    span(aria-hidden="true") &times;
+        div.cell.medium-4.float-right.text-center
+            h2.heading Fancy Results
+            a.button.hollow(href='/admin/results') Load Fancy Results
+    div.grid-x.grid-padding-x
+        div.cell.medium-4.float-right.text-center
+            h2.heading Lock In Results
+            a.button.hollow.alert(href='/admin/lock') Lock
+            a.button.hollow.success(href='/admin/unlock') Unlock
+
+    script.
+        function LoadResults() {
+            $.ajax({
+                url: 'admin/api/getresultsraw',
+                method: 'POST',
+            }).done(function (res) {
+                results = res.results;
+                CreateResultsTable($('#results-table'));
+                $('#results-modal').foundation('open');
+            });
+
+        }
+

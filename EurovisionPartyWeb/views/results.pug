@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    style.
+        body, html, .grid-container { background-image: linear-gradient(to bottom, steelblue, white); }
+        body, html, .grid-container { height:100%; }
+        .grid { width: 100% !important; max-height: 50%; }
+    meta(name='viewport', content='width=device-width', initial-scale='1.0')
+    title= title
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css', integrity='sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=', crossorigin='anonymous')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', integrity='sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=', crossorigin='anonymous')
+    script(src='https://kit.fontawesome.com/ec7b5b425d.js')
+    script(src='/javascripts/isotope.pkgd.min.js')
+    script(src='/javascripts/fit-columns.js')
+    script(src='/javascripts/main.js')
+    script(src='/javascripts/fancy-results.js')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+  body
+    div.grid-container.fluid
+        div.grid
+        div.back-forwards.grid-x.text-center
+            div.cell.small-4
+                //button.button.hollow(type="button", onclick='Back()')
+                    i.fas.fa-chevron-left.fa-2x
+            div.cell.small-4
+                h2.results-heading.country
+            div.cell.small-4
+                button.button.hollow(type="button", onclick='Next()')
+                    i.fas.fa-chevron-right.fa-2x
+                div.next-info
+        div.summary.grid-x
+            
+    script.
+        $(document).foundation();

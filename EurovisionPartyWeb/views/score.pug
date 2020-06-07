@@ -1,0 +1,89 @@
+extends shared/layout
+block content
+    script(src='/javascripts/score.js')
+    if messages != null
+        if messages.error
+            div.callout.alert(data-closable)
+                ul
+                    each message in messages.errors
+                         li #{message}
+                button.close-button(data-close, aria-label="Dismiss alert", type="button")
+                        span(aria-hidden="true") &times;
+        if messages.info
+            div.callout.success(data-closable)
+                ul
+                    each message in messages.info
+                         li #{message}
+                button.close-button(data-close, aria-label="Dismiss success", type="button")
+                        span(aria-hidden="true") &times;
+    div.grid-x.grid-padding-x
+        div.cell.medium-10.float-center
+            h2.text-center.heading Scoring
+            p.text-center Give points to the songs you enjoyed the most but beware you only get to give points to <strong>10 acts out of the 41</strong> - so choose carefully! 
+             | You cannot give more than one set of points to the <strong>same country</strong>, nor can you vote for your <strong>own country</strong>. You will be asked to <strong>read your top three</strong>
+             | (12, 10, 8 points) when the results are being called but all the others will still be counted. Please be sure to assign <strong>all</strong> points. Have fun!
+            div.grid-x  
+                div.small-1.cell
+                    label.text-right(for="12PointBox")
+                        h3.heading 12&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="10 Points...", id="12PointBox", point-v="12")
+                div.small-1.cell
+                    label.text-right(for="10PointBox")
+                        h3.heading 10&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="10 Points...", id="10PointBox", point-v="10")
+                div.small-1.cell
+                    label.text-right(for="8PointBox")
+                        h3.heading 8&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="8 Points...", id="8PointBox", point-v="8")
+                div.small-1.cell
+                    label.text-right(for="7PointBox")
+                        h3.heading 7&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="7 Points...", id="7PointBox", point-v="7")
+                div.small-1.cell
+                    label.text-right(for="6PointBox")
+                        h3.heading 6&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="6 Points...", id="6PointBox", point-v="6")
+                div.small-1.cell
+                    label.text-right(for="5PointBox")
+                        h3.heading 5&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="5 Points...", id="5PointBox", point-v="5")
+                div.small-1.cell
+                    label.text-right(for="4PointBox")
+                        h3.heading 4&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="4 Points...", id="4PointBox", point-v="4")
+                div.small-1.cell
+                    label.text-right(for="3PointBox")
+                        h3.heading 3&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="3 Points...", id="3PointBox", point-v="3")
+                div.small-1.cell
+                    label.text-right(for="2PointBox")
+                        h3.heading 2&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="2 Points...", id="2PointBox", point-v="2")
+                div.small-1.cell
+                    label.text-right(for="1PointBox")
+                        h3.heading 1&nbsp;
+                div.small-11.cell
+                    select.point-box(placeholder="1 Point...", id="1PointBox", point-v="1")
+            form(name="Score", method="post", action="/score/submit")
+                input.hidden-point-box(type="hidden", name="_12PointBox", value="", point-v="12")
+                input.hidden-point-box(type="hidden", name="_10PointBox", value="", point-v="10")
+                input.hidden-point-box(type="hidden", name="_8PointBox", value="", point-v="8")
+                input.hidden-point-box(type="hidden", name="_7PointBox", value="", point-v="7")
+                input.hidden-point-box(type="hidden", name="_6PointBox", value="", point-v="6")
+                input.hidden-point-box(type="hidden", name="_5PointBox", value="", point-v="5")
+                input.hidden-point-box(type="hidden", name="_4PointBox", value="", point-v="4")
+                input.hidden-point-box(type="hidden", name="_3PointBox", value="", point-v="3")
+                input.hidden-point-box(type="hidden", name="_2PointBox", value="", point-v="2")
+                input.hidden-point-box(type="hidden", name="_1PointBox", value="", point-v="1")
+                div.grid-x
+                    div.cell
+                        input(type="submit", name="submit" value="Submit").button.hollow.float-right

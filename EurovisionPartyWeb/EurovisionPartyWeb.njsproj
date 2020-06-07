@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>EurovisionPartyWeb</Name>
+    <RootNamespace>EurovisionPartyWeb</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>06a69a5e-6b50-4d26-9785-ff3c737b93ae</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config\config.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\font\Eurotype2016.ttf" />
+    <Content Include="public\images\eurovision.png" />
+    <Content Include="public\images\large\albania.png" />
+    <Content Include="public\images\large\armenia.png" />
+    <Content Include="public\images\large\australia.png" />
+    <Content Include="public\images\large\austria.png" />
+    <Content Include="public\images\large\azerbaijan.png" />
+    <Content Include="public\images\large\belarus.png" />
+    <Content Include="public\images\large\belgium.png" />
+    <Content Include="public\images\large\bulgaria.png" />
+    <Content Include="public\images\large\croatia.png" />
+    <Content Include="public\images\large\cyprus.png" />
+    <Content Include="public\images\large\czechrepublic.png" />
+    <Content Include="public\images\large\denmark.png" />
+    <Content Include="public\images\large\estonia.png" />
+    <Content Include="public\images\large\finland.png" />
+    <Content Include="public\images\large\france.png" />
+    <Content Include="public\images\large\georgia.png" />
+    <Content Include="public\images\large\germany.png" />
+    <Content Include="public\images\large\greece.png" />
+    <Content Include="public\images\large\iceland.png" />
+    <Content Include="public\images\large\ireland.png" />
+    <Content Include="public\images\large\israel.png" />
+    <Content Include="public\images\large\italy.png" />
+    <Content Include="public\images\large\latvia.png" />
+    <Content Include="public\images\large\lithuania.png" />
+    <Content Include="public\images\large\malta.png" />
+    <Content Include="public\images\large\moldova.png" />
+    <Content Include="public\images\large\netherlands.png" />
+    <Content Include="public\images\large\northmacedonia.png" />
+    <Content Include="public\images\large\norway.png" />
+    <Content Include="public\images\large\poland.png" />
+    <Content Include="public\images\large\portugal.png" />
+    <Content Include="public\images\large\romania.png" />
+    <Content Include="public\images\large\russia.png" />
+    <Content Include="public\images\large\sanmarino.png" />
+    <Content Include="public\images\large\serbia.png" />
+    <Content Include="public\images\large\slovenia.png" />
+    <Content Include="public\images\large\spain.png" />
+    <Content Include="public\images\large\sweden.png" />
+    <Content Include="public\images\large\switzerland.png" />
+    <Content Include="public\images\large\ukraine.png" />
+    <Content Include="public\images\large\unitedkingdom.png" />
+    <Content Include="public\images\small\albania.webp" />
+    <Content Include="public\images\small\armenia.webp" />
+    <Content Include="public\images\small\australia.webp" />
+    <Content Include="public\images\small\austria.webp" />
+    <Content Include="public\images\small\azerbaijan.webp" />
+    <Content Include="public\images\small\belarus.webp" />
+    <Content Include="public\images\small\belgium.webp" />
+    <Content Include="public\images\small\bulgaria.webp" />
+    <Content Include="public\images\small\croatia.webp" />
+    <Content Include="public\images\small\cyprus.webp" />
+    <Content Include="public\images\small\czechrepublic.webp" />
+    <Content Include="public\images\small\denmark.webp" />
+    <Content Include="public\images\small\estonia.webp" />
+    <Content Include="public\images\small\finland.webp" />
+    <Content Include="public\images\small\france.webp" />
+    <Content Include="public\images\small\georgia.webp" />
+    <Content Include="public\images\small\germany.webp" />
+    <Content Include="public\images\small\greece.webp" />
+    <Content Include="public\images\small\iceland.webp" />
+    <Content Include="public\images\small\ireland.webp" />
+    <Content Include="public\images\small\israel.webp" />
+    <Content Include="public\images\small\italy.webp" />
+    <Content Include="public\images\small\latvia.webp" />
+    <Content Include="public\images\small\lithuania.webp" />
+    <Content Include="public\images\small\malta.webp" />
+    <Content Include="public\images\small\moldova.webp" />
+    <Content Include="public\images\small\netherlands.webp" />
+    <Content Include="public\images\small\northmacedonia.webp" />
+    <Content Include="public\images\small\norway.webp" />
+    <Content Include="public\images\small\poland.webp" />
+    <Content Include="public\images\small\portugal.webp" />
+    <Content Include="public\images\small\romania.webp" />
+    <Content Include="public\images\small\russia.webp" />
+    <Content Include="public\images\small\sanmarino.webp" />
+    <Content Include="public\images\small\serbia.webp" />
+    <Content Include="public\images\small\slovenia.webp" />
+    <Content Include="public\images\small\spain.webp" />
+    <Content Include="public\images\small\sweden.webp" />
+    <Content Include="public\images\small\switzerland.webp" />
+    <Content Include="public\images\small\ukraine.webp" />
+    <Content Include="public\images\small\unitedkingdom.webp" />
+    <Content Include="public\javascripts\fancy-results.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\fit-columns.js" />
+    <Content Include="public\javascripts\isotope.pkgd.min.js" />
+    <Content Include="public\javascripts\results.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\score.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\results.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\score.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\shared\nav.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <None Include="app.ts" />
+    <None Include="routes\index.ts" />
+    <Content Include="public\javascripts\main.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="README.md" />
+    <Content Include="views\index.pug" />
+    <Content Include="views\login.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\shared\layout.pug" />
+    <Content Include="views\error.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="common\dal\" />
+    <Folder Include="common\models\" />
+    <Folder Include="common\helpers\" />
+    <Folder Include="config\" />
+    <Folder Include="public\" />
+    <Folder Include="public\font\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\large\" />
+    <Folder Include="public\images\small\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+    <Folder Include="views\shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="common\dal\UserDal.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="common\helpers\PointsHelper.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="common\models\User.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\admin.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\login.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\score.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="views\admin.pug">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

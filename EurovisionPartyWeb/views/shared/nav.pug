@@ -1,0 +1,23 @@
+div#nav
+    div.top-bar.stacked-for-small.sticky(data-sticky, data-top-anchor='nav:top', data-options="marginTop:0;")
+            div.top-bar-left
+                ul.menu.icons.icon-left     
+                    if loggedIn
+                        li.menu-text
+                            - var image = 'images/large/' + username + '.png'
+                            img.menu-img(src= image)
+                    if title
+                        li.menu-text #{title} 
+                    if loggedIn
+                        li
+                            a(href='/score') Score
+            div.top-bar-right
+                ul.menu
+                    if admin
+                        li
+                            a(href='/admin') Admin
+                    li
+                        if loggedIn
+                            a(href='/u/logout') Logout
+                        else
+                            a(href='/u/login') Login

@@ -1,0 +1,1 @@
+Rename your 'defaultConfig.json' to 'config.json' and fill in the mongoDB connection string, this may be configurable through the website itself in the future
