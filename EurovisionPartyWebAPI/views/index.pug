@@ -3,3 +3,14 @@ extends shared/layout
 block content
   h1.heading= title
   p Welcome to Alice's Eurovision Birthday Party 2020!
+  h2.heading Login
+    form(name="AddUser", method="post", action="/addUserTest")
+      div.grid-x  
+        div.cell
+          input(type="text", placeholder="Name...", name="name")
+        div.cell
+          input(type="text", placeholder="Username...", name="username")
+        div.cell
+          input(type="password", placeholder="Password...", name="password")
+        div.cell
+          input(type="submit", name="submit" value="Submit").button.hollow

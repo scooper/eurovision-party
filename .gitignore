@@ -3,6 +3,7 @@
 
 # vs dirs
 .vs/
+.vscode/
 
 # Logs
 logs
