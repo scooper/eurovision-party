@@ -1,8 +1,11 @@
+EurovisionPartyWebAPI/
+
 # 3rd party
 /vendor
 
 # vs dirs
 .vs/
+.vscode/
 
 # Logs
 logs

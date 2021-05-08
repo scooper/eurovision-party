@@ -22,7 +22,8 @@ html
 
         div.footer
             hr
-            p Eurovision Party 2020
+            p#footer Eurovision Party
 
     script.
         $(document).foundation();
+        $('#footer').text('Eurovision Party ' + (new Date).getFullYear());

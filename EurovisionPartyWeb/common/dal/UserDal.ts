@@ -30,6 +30,16 @@ export class UserDal {
         });
     }
 
+    public static async updateAllUserPassword(password: string) {
+        return await User.updateMany({password: password})
+        .then((obj) => {
+            return obj;
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
+
     public static async getUser(name: string) {
         return await User.findOne({ 'username': name }).exec();
     }

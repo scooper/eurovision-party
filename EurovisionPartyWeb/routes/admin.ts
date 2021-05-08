@@ -37,6 +37,20 @@ router.post('/u/create', (req: express.Request, res: express.Response) => {
     res.redirect('/admin');
 });
 
+router.post('/u/updatepassword', (req: express.Request, res: express.Response) => {
+    // check user is an admin in session
+    if (!req.session['loggedin'] || !req.session['admin']) {
+        res.redirect('/');
+        return;
+    }
+
+    var newpass = req.body.password;
+
+    UserDal.updateAllUserPassword(newpass);
+
+    res.redirect('/admin');
+});
+
 router.get('/results', (req: express.Request, res: express.Response) => {
     // check user is an admin in session
     if (!req.session['loggedin'] || !req.session['admin']) {

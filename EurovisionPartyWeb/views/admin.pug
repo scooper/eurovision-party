@@ -29,6 +29,14 @@ block content
             h2.heading Lock In Results
             a.button.hollow.alert(href='/admin/lock') Lock
             a.button.hollow.success(href='/admin/unlock') Unlock
+        div.cell.medium-4.float-right.text-center
+            h2.heading Update Password
+            form(name="UpdatePass", method="post", action="/admin/u/updatepassword")
+                div.grid-x  
+                    div.cell
+                        input(type="text", placeholder="Password...", name="password")
+                    div.cell
+                        input(type="submit", name="submit" value="Update").button.hollow
 
     script.
         function LoadResults() {

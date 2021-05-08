@@ -17,7 +17,7 @@ router.get('/login', (req: express.Request, res: express.Response) => {
 
 router.post('/login', async (req: express.Request, res: express.Response) => {
     var username: string = req.body.username.toLowerCase();
-    var password: string = req.body.password.toLowerCase();
+    var password: string = req.body.password;
 
     var user = await userhelper.UserDal.getUser(username);
 
