@@ -21,8 +21,9 @@ router.get('/', async (req: express.Request, res: express.Response) => {
     }
 
     var currentUser = await UserDal.getUser(req.session['username']);  
+    var numCountries = await UserDal.getUserCount();
 
-    res.render('score', { title: currentUser.country, loggedIn: req.session['loggedin'], admin: req.session['admin'], username: req.session['username'], messages: messages });
+    res.render('score', { title: currentUser.country, loggedIn: req.session['loggedin'], admin: req.session['admin'], username: req.session['username'], messages: messages, numCountries: numCountries });
 });
 
 router.post('/submit', async (req: express.Request, res: express.Response) => {

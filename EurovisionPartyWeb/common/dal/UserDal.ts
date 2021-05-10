@@ -49,4 +49,8 @@ export class UserDal {
         var results = await User.find().sort('country').exec();
         return results;
     }
+
+    public static async getUserCount() {
+        return await User.find().count().exec();
+    }
 }

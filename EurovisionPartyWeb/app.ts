@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
 });
 
 // mongo
-mongoose.connect(config.mongo.connectionString, { useNewUrlParser: true });
+mongoose.connect(config.mongo.connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
 // error handlers
