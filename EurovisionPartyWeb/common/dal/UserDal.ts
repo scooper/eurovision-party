@@ -51,6 +51,6 @@ export class UserDal {
     }
 
     public static async getUserCount() {
-        return await User.find().count().exec();
+        return await User.count().exec();
     }
 }
