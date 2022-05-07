@@ -10,7 +10,7 @@
 
 
 body {
-    background-color: #001233;
+    background-color: white;
 }
 
 .top-bar {
@@ -20,7 +20,7 @@ body {
 }
 
 .top-bar, .top-bar ul {
-    background-color: #ac2027;
+    background-color: #002F6C;
 }
 
 .menu li a {
@@ -65,13 +65,13 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #001233;
+    background-color: white;
 }
 
 .button.hollow {
     border-radius: 30px;
-    border-color: white;
-    color: white;
+    border-color: black;
+    color: black;
 }
 
 .grid-item {
@@ -94,7 +94,7 @@ body {
 }
 
 .grid-container {
-    color: white;
+    color: black;
 }
 
 .grid:after {
@@ -112,7 +112,7 @@ body {
 }
 
 .heading {
-    color: white;
+    color: #002F6C;
 }
 
 .grid-highlighted {
