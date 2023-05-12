@@ -10,33 +10,33 @@
 
 
 body {
-    background-color: white;
+    background-color: #74b9ff ;
 }
 
 .top-bar {
-    background-color: #ac2027;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    /* background-color: #ac2027; */
+    border-top: 5px solid #74b9ff ;
+    border-bottom: 5px solid #74b9ff ;
 }
 
 .top-bar, .top-bar ul {
-    background-color: #002F6C;
+    background-color: #ffcc00;
 }
 
 .menu li a {
-    color: white;
+    color: #0066cc ;
 }
 
 .menu li a:hover {
     background-color: white;
-    color: black;
+    color: #0066cc;
     border-radius: 30px;
 }
 
 .menu {
     font-family: 'Eurotype';
     font-size: x-large;
-    color: white;
+    color: #0066cc;
 }
 
 .heading {
@@ -65,7 +65,7 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: white;
+    background-color: #74b9ff;
 }
 
 .button.hollow {
@@ -112,7 +112,7 @@ body {
 }
 
 .heading {
-    color: #002F6C;
+    color: black;
 }
 
 .grid-highlighted {
