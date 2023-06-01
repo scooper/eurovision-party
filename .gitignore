@@ -1,5 +1,15 @@
+# python
+__pycache__
+*.pyc
+
+# environment
+.env
+
 # 3rd party
 /vendor
+
+# virtual env
+/venv
 
 # vs dirs
 .vs/
